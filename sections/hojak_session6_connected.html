@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>세션 6 - VIP 한정 커미션 및 기관 프로젝트 기준 | 호작(好作) 황병필</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Paperlogy:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  @font-face {
+    font-family: 'Paperlogy';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-2ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Paperlogy';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Paperlogy';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Paperlogy';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Paperlogy';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Paperlogy';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  :root {
+    --bg-deep: #141414;
+    --bg-card: #19191c;
+    --text-main: #f5f4f0;
+    --text-sub: #aba79f;
+    --gold: #c6b08c;
+    --gold-light: #e2d3b8;
+    --border-subtle: rgba(198, 176, 140, 0.22);
+    --font-gothic: 'Paperlogy', 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+    --fs-eyebrow: 11.5px;
+    --fs-body: 14.5px;
+    --fs-unified-headcopy: clamp(28px, 4.2vw, 44px);
+    --color-unified-headcopy: #d6b67c;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--bg-deep);
+    color: var(--text-main);
+    font-family: var(--font-gothic);
+    font-weight: 200;
+    font-size: var(--fs-body);
+    line-height: 1.95;
+    letter-spacing: -0.01em;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    word-break: keep-all;
+  }
+
+  .eyebrow {
+    font-family: var(--font-gothic);
+    font-size: var(--fs-eyebrow);
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    margin-bottom: 14px;
+    display: block;
+    text-transform: uppercase;
+  }
+
+  .session-title {
+    font-family: 'Paperlogy', sans-serif;
+    font-size: var(--fs-unified-headcopy);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    color: var(--color-unified-headcopy);
+    margin-bottom: 14px;
+  }
+
+  /* Session 6 : PRESTIGE COMMISSION & B2B */
+  .s6-page {
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 72px 5% 96px;
+  }
+  .s6-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+  .s6-lead-copy {
+    font-family: var(--font-gothic);
+    font-size: clamp(14.5px, 1.5vw, 16.5px);
+    font-weight: 300;
+    line-height: 1.85;
+    color: #dad7d0;
+    margin-bottom: 40px;
+    word-break: keep-all;
+  }
+
+  /* 3-Tier Cards Grid (가격 삭제, 규격 및 구성 유지) */
+  .rate-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-bottom: 52px;
+  }
+  .rate-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    padding: 34px 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .rate-card.featured {
+    border: 1px solid var(--gold);
+    background: linear-gradient(160deg, #1d1b17 0%, #141417 100%);
+  }
+  .tier-badge {
+    font-family: var(--font-gothic);
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.16em;
+    color: var(--gold);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  .rate-card h3 {
+    font-family: var(--font-gothic);
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  .rate-target {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--text-sub);
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .rate-spec {
+    font-family: var(--font-gothic);
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--gold-light);
+    margin-bottom: 16px;
+  }
+  .rate-list {
+    list-style: none;
+    margin-bottom: 28px;
+  }
+  .rate-list li {
+    font-size: 13.5px;
+    font-weight: 300;
+    color: #d6d2c9;
+    margin-bottom: 10px;
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.75;
+  }
+  .rate-list li::before {
+    content: '•';
+    color: var(--gold);
+    position: absolute;
+    left: 0;
+  }
+  .rate-list li strong {
+    font-weight: 500;
+    color: #ffffff;
+  }
+  .rate-list li .sub-note {
+    display: block;
+    font-size: 12px;
+    color: var(--text-sub);
+    margin-top: 2px;
+  }
+
+  .rate-btn-primary {
+    width: 100%;
+    background: var(--gold);
+    color: #141414;
+    padding: 13px 20px;
+    font-family: var(--font-gothic);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    border: 1px solid var(--gold);
+    cursor: pointer;
+    transition: background 0.25s ease;
+  }
+  .rate-btn-primary:hover { background: var(--gold-light); }
+  .rate-btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .rate-btn-outline {
+    width: 100%;
+    background: transparent;
+    color: var(--text-main);
+    padding: 13px 20px;
+    font-family: var(--font-gothic);
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 0.06em;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+  .rate-btn-outline:hover {
+    border-color: var(--gold);
+    color: var(--gold-light);
+  }
+
+  /* Inquiry Box */
+  .inquiry-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    padding: 44px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 44px;
+  }
+
+  /* 좌측 DIRECT INQUIRY 영역 */
+  .direct-inquiry-eyebrow {
+    font-family: var(--font-gothic);
+    font-size: 11.5px;
+    font-weight: 300;
+    letter-spacing: 0.22em;
+    color: var(--gold);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 14px;
+  }
+  .direct-inquiry-title {
+    font-family: var(--font-gothic);
+    font-size: clamp(22px, 2.4vw, 28px);
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+    margin-bottom: 18px;
+  }
+  .direct-inquiry-desc {
+    font-family: var(--font-gothic);
+    font-size: 13.5px;
+    font-weight: 200;
+    color: var(--text-sub);
+    line-height: 1.85;
+    margin-bottom: 28px;
+  }
+  .direct-inquiry-divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    margin-bottom: 28px;
+  }
+  .direct-inquiry-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .direct-inquiry-row {
+    display: flex;
+    align-items: baseline;
+    font-family: var(--font-gothic);
+    font-size: 13.5px;
+    line-height: 1.7;
+  }
+  .direct-inquiry-label {
+    width: 78px;
+    flex-shrink: 0;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+  .direct-inquiry-value {
+    font-weight: 200;
+    color: var(--text-main);
+  }
+
+  .form-group { margin-bottom: 18px; }
+  .form-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--gold-light);
+    letter-spacing: 0.06em;
+    margin-bottom: 8px;
+  }
+  .form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    background: #101012;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    color: #fff;
+    padding: 12px 15px;
+    font-size: 13.5px;
+    font-family: var(--font-gothic);
+    font-weight: 300;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+  }
+
+  /* 전송 결과 메시지 배너 */
+  .form-status {
+    display: none;
+    margin-top: 16px;
+    padding: 14px 16px;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.65;
+    border: 1px solid var(--border-subtle);
+    background: rgba(198, 176, 140, 0.08);
+    color: var(--gold-light);
+  }
+  .form-status.error {
+    border-color: rgba(235, 110, 110, 0.45);
+    background: rgba(235, 110, 110, 0.08);
+    color: #f3b3b3;
+  }
+
+  @media (max-width: 960px) {
+    .rate-grid, .inquiry-box {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 860px) {
+    .s6-page { padding: 52px 5% 76px; }
+    .inquiry-box { padding: 28px 22px; }
+  }
+  @media (max-width: 768px) {
+    .session-title {
+      font-size: 27px;
+      line-height: 1.35;
+      margin-bottom: 16px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Session 6 : PRESTIGE COMMISSION & B2B -->
+<section class="s6-page" id="contact">
+  <div class="s6-inner">
+    <span class="eyebrow">HOJAK · PRESTIGE COMMISSION · B2B</span>
+    <h2 class="session-title">VIP 한정 커미션 및 기관 프로젝트 기준</h2>
+    <p class="s6-lead-copy">
+      작품의 희소성과 완성도를 위해 월 최대 2점의 프라이빗 커미션만 사전 예약제로 진행합니다.
+    </p>
+
+    <!-- 3-Tier Cards (가격 삭제, 기존 구성 유지) -->
+    <div class="rate-grid">
+      <!-- TIER 01 -->
+      <div class="rate-card">
+        <div>
+          <div class="tier-badge">TIER 01 · MASTERPIECE</div>
+          <h3>프라이빗 오너 컬렉션</h3>
+          <p class="rate-target">기업 창업주 · 원로 · 명예박사 · 가문 헌정</p>
+          <div class="rate-spec">50호 내외</div>
+          <ul class="rate-list">
+            <li>인물 맞춤형 히어로그라피 원화 1점</li>
+            <li>경영 철학·어록·좌우명 전문 큐레이션</li>
+            <li>박물관급 보존 표구 및 최고급 원목 프레임</li>
+            <li>작가 친필 작품보증서(COA) 및 스토리북</li>
+          </ul>
+        </div>
+        <button type="button" class="rate-btn-outline" onclick="selectTier('Tier 1. 프라이빗 오너 컬렉션')">이 등급으로 의뢰하기</button>
+      </div>
+
+      <!-- TIER 02 -->
+      <div class="rate-card featured">
+        <div>
+          <div class="tier-badge">TIER 02 · SIGNATURE PRESTIGE</div>
+          <h3>C-Level &amp; 창립기념 패키지</h3>
+          <p class="rate-target">회장 이·취임식 · 상장 기념 · 사옥 로비 영구 보존</p>
+          <div class="rate-spec">100호 대작</div>
+          <ul class="rate-list">
+            <li>대형 히어로그라피 원화 1점 (100호 이상)</li>
+            <li>
+              <strong>4K 시네마틱 헌정 미디어아트 영상 (1~2분)</strong>
+              <span class="sub-note">창립기념식·취임식 대형 LED월 상영용 모션 아트워크</span>
+            </li>
+            <li>VIP·임원진 배포용 친필 넘버링 판화 에디션 10점</li>
+          </ul>
+        </div>
+        <button type="button" class="rate-btn-primary" onclick="selectTier('Tier 2. C-Level & 창립기념 패키지')">이 등급으로 의뢰하기</button>
+      </div>
+
+      <!-- TIER 03 -->
+      <div class="rate-card">
+        <div>
+          <div class="tier-badge">TIER 03 · CORPORATE &amp; PUBLIC HERITAGE</div>
+          <h3>기업 역사관 · 공공조형물 프로젝트</h3>
+          <p class="rate-target">지자체 기념관 · 기업 사사(社史) · 사옥 시그니처월</p>
+          <ul class="rate-list">
+            <li>역대 리더 시리즈 원화 또는 초대형 벽면 작품</li>
+            <li>금속·아크릴·미디어 파사드 입체 조형물 총괄 디렉팅</li>
+            <li>PR 캠페인·애뉴얼리포트 공식 IP 라이선스 부여</li>
+            <li>기보유 작품(55점+) B2B 데이터 라이선싱 별도 협의</li>
+          </ul>
+        </div>
+        <button type="button" class="rate-btn-outline" onclick="selectTier('Tier 3. 기업 역사관 & 공공조형물 프로젝트')">프로젝트 상담 신청</button>
+      </div>
+    </div>
+
+    <!-- 하단 문의 폼 (feel.whang@gmail.com 실시간 이메일 수신 연동) -->
+    <div class="inquiry-box" id="inquiryFormBox">
+      <div class="s6-info">
+        <span class="direct-inquiry-eyebrow">DIRECT INQUIRY</span>
+        <h3 class="direct-inquiry-title">작품 소장 · 전시 · 프로젝트 의뢰</h3>
+        <p class="direct-inquiry-desc">
+          양식을 작성해 주시면 호작 스튜디오(호작의필통)에서 검토 후<br>
+          24시간 이내에 공식 제안서와 함께 직접 회신드립니다.
+        </p>
+        <hr class="direct-inquiry-divider">
+        <div class="direct-inquiry-meta">
+          <div class="direct-inquiry-row">
+            <span class="direct-inquiry-label">STUDIO</span>
+            <span class="direct-inquiry-value">호작의필통 (HOJAK Studio)</span>
+          </div>
+          <div class="direct-inquiry-row">
+            <span class="direct-inquiry-label">ARTIST</span>
+            <span class="direct-inquiry-value">호작 황병필 (Hwang Byoung Feel)</span>
+          </div>
+          <div class="direct-inquiry-row">
+            <span class="direct-inquiry-label">DIRECT</span>
+            <span class="direct-inquiry-value">010-2252-3123</span>
+          </div>
+          <div class="direct-inquiry-row">
+            <span class="direct-inquiry-label">E-MAIL</span>
+            <span class="direct-inquiry-value">feel.whang@gmail.com</span>
+          </div>
+        </div>
+      </div>
+
+      <form id="commissionForm" action="https://formsubmit.co/ajax/feel.whang@gmail.com" method="POST" onsubmit="handleCommissionSubmit(event)">
+        <!-- FormSubmit 설정용 숨김 필드 -->
+        <input type="hidden" name="_subject" value="[호작 포트폴리오] 신규 작품 의뢰 및 프로젝트 문의">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none">
+
+        <div class="form-group">
+          <label for="clientName">성함 / 담당자명 *</label>
+          <input type="text" id="clientName" name="성함_담당자명" placeholder="성함 또는 담당자명을 입력해 주세요" required>
+        </div>
+
+        <div class="form-group">
+          <label for="clientOrg">소속 (기관 / 기업명)</label>
+          <input type="text" id="clientOrg" name="소속_기관_기업명" placeholder="기관 또는 기업명 (개인 의뢰 시 생략 가능)">
+        </div>
+
+        <div class="form-group">
+          <label for="clientContact">연락처 / 이메일 *</label>
+          <input type="text" id="clientContact" name="연락처_이메일" placeholder="연락처 또는 이메일 주소를 입력해 주세요" required>
+        </div>
+
+        <div class="form-group">
+          <label for="inquiryField">의뢰분야 및 희망분야 *</label>
+          <select id="inquiryField" name="의뢰분야_및_희망분야" required>
+            <option value="" disabled selected>의뢰분야 및 희망분야를 선택해 주세요</option>
+            <option value="Tier 1. 프라이빗 오너 컬렉션">Tier 1. 프라이빗 오너 컬렉션</option>
+            <option value="Tier 2. C-Level &amp; 창립기념 패키지">Tier 2. C-Level &amp; 창립기념 패키지</option>
+            <option value="Tier 3. 기업 역사관 &amp; 공공조형물 프로젝트">Tier 3. 기업 역사관 &amp; 공공조형물 프로젝트</option>
+            <option value="공공기관 · 기념관 특별초대전 및 교육 워크숍 패키지">공공기관 · 기념관 특별초대전 및 교육 워크숍 패키지</option>
+            <option value="사찰 · 대형 교회 성전 봉헌 마스터피스">사찰 · 대형 교회 성전 봉헌 마스터피스</option>
+            <option value="B2B 아트워크 IP 데이터 라이선싱 / 기타 협업">B2B 아트워크 IP 데이터 라이선싱 / 기타 협업</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="inquiryMessage">문의 내용 *</label>
+          <textarea id="inquiryMessage" name="문의_내용" rows="5" placeholder="희망 일정, 작품 규격 또는 활용 목적, 프로젝트 개요 등을 자유롭게 적어 주세요" required></textarea>
+        </div>
+
+        <button type="submit" id="submitBtn" class="rate-btn-primary">문의 접수하기</button>
+        <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script>
+  function selectTier(tierValue) {
+    const selectEl = document.getElementById('inquiryField');
+    const formBox = document.getElementById('inquiryFormBox');
+    if (selectEl) {
+      selectEl.value = tierValue;
+    }
+    if (formBox) {
+      formBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  async function handleCommissionSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const submitBtn = document.getElementById('submitBtn');
+    const statusBox = document.getElementById('formStatus');
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = '전송 중입니다...';
+    statusBox.style.display = 'none';
+    statusBox.classList.remove('error');
+
+    try {
+      const formData = new FormData(form);
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        statusBox.textContent = '문의가 정상적으로 접수되었습니다. 호작 스튜디오(호작의필통)에서 검토 후 24시간 이내에 회신드리겠습니다.';
+        statusBox.style.display = 'block';
+        form.reset();
+      } else {
+        throw new Error('전송 응답 오류');
+      }
+    } catch (err) {
+      statusBox.classList.add('error');
+      statusBox.innerHTML = '일시적인 네트워크 오류로 폼 전송이 완료되지 않았습니다.<br>직접 연락처(010-2252-3123) 또는 이메일(feel.whang@gmail.com)로 문의해 주시면 신속히 안내해 드리겠습니다.';
+      statusBox.style.display = 'block';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = '문의 접수하기';
+    }
+  }
+</script>
+
+</body>
+</html>
